@@ -1,5 +1,5 @@
 import "./globals.css";
-import { roboto } from "@/lib/fonts";
+import { playfair } from "@/lib/fonts";
 
 import Nav from "@/components/Nav";
 
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-[#0E141C] text-slate-200`}>
+      <body className={`${playfair.className}`}>
         <Nav />
         {children}
       </body>

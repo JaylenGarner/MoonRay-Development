@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { roboto } from "@/lib/fonts";
 
 const links = [
   {
@@ -18,7 +19,9 @@ const links = [
 
 const Nav = () => {
   return (
-    <div className="h-[70px] absolute w-full flex_center space-x-8 text-xl font-semibold pt-8 z-20">
+    <div
+      className={`${roboto.className} h-[70px] absolute w-full flex_center space-x-8 text-xl font-bold pt-8 z-20 text-white`}
+    >
       <Image
         src="https://moonray-development.s3.amazonaws.com/Public/Assets/moonray-logo.svg"
         width={80}

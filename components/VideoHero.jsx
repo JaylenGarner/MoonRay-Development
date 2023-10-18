@@ -1,14 +1,10 @@
-import { playfair } from "@/lib/fonts";
-
 const VideoHero = () => {
   return (
     <div className="w-full h-2/5">
       {/* Heading */}
       <div className="absolute w-full z-20 h-2/5 flex_center">
-        <h1
-          className={`text-6xl max-sm:text-4xl  font-bold ${playfair.className}  text-center leading-snug tracking-wide`}
-        >
-          MOONRAY DEVELOPMENT
+        <h1 className="text-6xl max-sm:text-4xl  font-bold   text-center leading-snug tracking-wide text-slate-200">
+          MoonRay Development
         </h1>
       </div>
 
