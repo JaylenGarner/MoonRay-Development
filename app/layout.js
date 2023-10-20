@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${playfair.className} h-screen`}>
+      <body className={`${playfair.className}`}>
         <Nav />
         {children}
       </body>

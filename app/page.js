@@ -4,7 +4,7 @@ import { services } from "@/lib/content";
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div>
       <VideoHero />
       <div className="flex_center pt-16">
         <h2 className="text-5xl max-sm:text-4xl font-bold leading-snug">
