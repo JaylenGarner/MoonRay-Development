@@ -20,13 +20,15 @@ const links = [
 const Nav = () => {
   return (
     <div
-      className={`${roboto.className} h-[70px] absolute w-full flex_center space-x-8 text-xl font-bold pt-8 z-20 text-white`}
+      className={`${roboto.className} h-[70px] absolute w-full flex_center space-x-8 text-xl font-bold pt-8 z-30 text-white`}
     >
-      <Image
-        src="https://moonray-development.s3.amazonaws.com/Public/Assets/moonray-logo.svg"
-        width={80}
-        height={80}
-      ></Image>
+      <Link href="/">
+        <Image
+          src="https://moonray-development.s3.amazonaws.com/Public/Assets/moonray-logo.svg"
+          width={80}
+          height={80}
+        ></Image>
+      </Link>
       {links.map((link) => {
         return <Link href={link.path}>{link.label}</Link>;
       })}

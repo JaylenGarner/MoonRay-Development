@@ -1,4 +1,5 @@
 import { roboto } from "@/lib/fonts";
+import Link from "next/link";
 
 const ServiceCard = ({ service, i }) => {
   const isEven = i % 2 === 0;
@@ -15,11 +16,11 @@ const ServiceCard = ({ service, i }) => {
   }
 
   return (
-    <div className="flex items-center z-0 relative ">
-      <img
-        src="https://newsroom.unsw.edu.au/sites/default/files/styles/full_width__2x/public/thumbnails/image/gettyimages-1360144430.jpg"
-        className={`w-[900px] h-[600px] ${imgMargin}`}
-      />
+    <div className="flex items-center z-0 relative">
+      <Link href={service.page}>
+        <img src={service.img} className={`w-[900px] h-[600px] ${imgMargin}`} />
+      </Link>
+
       <div
         className={`w-[350px] h-[500px] bg-[#212121] absolute z-10 ${cardPosition}`}
       >
@@ -36,9 +37,11 @@ const ServiceCard = ({ service, i }) => {
             </p>
           </div>
           <div className={`absolute bottom-8 ${buttonPosition} flex `}>
-            <button className="border-2 border-white pt-2 pb-2 pr-6 pl-6 font-bold text-lg">
-              Learn More
-            </button>
+            <Link href={service.page}>
+              <button className="border-2 border-white pt-2 pb-2 pr-6 pl-6 font-bold text-lg">
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
       </div>
