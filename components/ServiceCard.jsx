@@ -1,4 +1,4 @@
-import { roboto } from "@/lib/fonts";
+import { workSans } from "@/lib/fonts";
 import Link from "next/link";
 
 const ServiceCard = ({ service, i }) => {
@@ -18,7 +18,10 @@ const ServiceCard = ({ service, i }) => {
   return (
     <div className="flex items-center z-0 relative">
       <Link href={service.page}>
-        <img src={service.img} className={`w-[900px] h-[600px] ${imgMargin}`} />
+        <img
+          src={service.previewImg}
+          className={`w-[900px] h-[600px] ${imgMargin}`}
+        />
       </Link>
 
       <div
@@ -29,9 +32,9 @@ const ServiceCard = ({ service, i }) => {
             {service.name}
           </h3>
           <div className="border border-bottom border-slate-200 right-0"></div>
-          <div className="pt-4">
+          <div>
             <p
-              className={`p-4 pr-8 pl-8 font-bold ${descPosition} ${roboto.className} `}
+              className={`p-4 pr-8 pl-8 font-bold ${descPosition} ${workSans.className} `}
             >
               {service.description}
             </p>

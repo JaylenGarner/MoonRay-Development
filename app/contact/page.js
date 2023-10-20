@@ -1,14 +1,13 @@
 import Hero from "@/components/Hero";
 
 const Contact = () => {
-  return (
-    <Hero
-      heading={"Contact Us"}
-      img={
-        "https://moonray-development.s3.amazonaws.com/Public/Assets/satellite.jpg"
-      }
-    />
-  );
+  const service = {
+    name: "Contact Us",
+    heroImg:
+      "https://moonray-development.s3.amazonaws.com/Public/Assets/satellite.jpg",
+  };
+
+  return <Hero service={service} />;
 };
 
 export default Contact;

@@ -1,13 +1,15 @@
 import Hero from "@/components/Hero";
+import ServiceContent from "@/components/ServiceContent";
+import { services } from "@/lib/content";
 
 const ManagedServices = () => {
+  const service = services.managedServices;
+
   return (
-    <Hero
-      heading={"Managed Services"}
-      img={
-        "https://moonray-development.s3.amazonaws.com/Public/Assets/moon.jpg"
-      }
-    />
+    <>
+      <Hero service={service} />
+      <ServiceContent service={service} />
+    </>
   );
 };
 

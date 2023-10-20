@@ -1,16 +1,16 @@
 import HeroOverlay from "./HeroOverlay";
 
-const Hero = ({ heading, img }) => {
+const Hero = ({ service }) => {
   return (
     <div className="hero_container">
       <HeroOverlay />
 
       <div className="hero_heading_container">
-        <h1 className="hero_heading">{heading}</h1>
+        <h1 className="hero_heading">{service.name}</h1>
       </div>
 
       <div className="max-sm:hidden">
-        <img src={img} className="hero_image" />
+        <img src={service.heroImg} className="hero_image" />
       </div>
     </div>
   );

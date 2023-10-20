@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { roboto } from "@/lib/fonts";
+import { workSans } from "@/lib/fonts";
 
 const links = [
   {
@@ -20,7 +20,7 @@ const links = [
 const Nav = () => {
   return (
     <div
-      className={`${roboto.className} h-[70px] absolute w-full flex_center space-x-8 text-xl font-bold pt-8 z-30 text-white`}
+      className={`${workSans.className} h-[70px] absolute w-full flex_center space-x-8 text-xl font-bold pt-8 z-30 text-white`}
     >
       <Link href="/">
         <Image

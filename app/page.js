@@ -13,7 +13,7 @@ export default function Home() {
       </div>
 
       <div className="flex_center flex-col pt-16 space-y-24">
-        {services.map((service, i) => {
+        {Object.values(services).map((service, i) => {
           return <ServiceCard service={service} i={i} key={i} />;
         })}
       </div>

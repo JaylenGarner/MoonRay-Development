@@ -1,13 +1,14 @@
 import Hero from "@/components/Hero";
+import ServiceContent from "@/components/ServiceContent";
+import { services } from "@/lib/content";
 
 const WebsiteRevamp = () => {
+  const service = services.websiteRevamp;
   return (
-    <Hero
-      heading={"Website Revamp"}
-      img={
-        "https://moonray-development.s3.amazonaws.com/Public/Assets/astronaut-repair.jpg"
-      }
-    />
+    <>
+      <Hero service={service} />
+      <ServiceContent service={service} />
+    </>
   );
 };
 

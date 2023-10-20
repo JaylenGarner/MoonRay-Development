@@ -1,18 +1,15 @@
 import Hero from "@/components/Hero";
 import ServiceContent from "@/components/ServiceContent";
+import { services } from "@/lib/content";
 
 const WebDevelopment = () => {
-  return (
-    <div className="h-screen">
-      <Hero
-        heading={"Web Development"}
-        img={
-          "https://moonray-development.s3.amazonaws.com/Public/Assets/rocket-cropped.jpg"
-        }
-      />
+  const service = services.webDevelopment;
 
-      <ServiceContent />
-    </div>
+  return (
+    <>
+      <Hero service={service} />
+      <ServiceContent service={service} />
+    </>
   );
 };
 
