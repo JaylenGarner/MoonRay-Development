@@ -12,6 +12,10 @@ const links = [
     path: "/services",
   },
   {
+    label: "Portfolio",
+    path: "https://jaylengarner.com",
+  },
+  {
     label: "Contact",
     path: "/contact",
   },
@@ -30,7 +34,14 @@ const Nav = () => {
         ></Image>
       </Link>
       {links.map((link) => {
-        return <Link href={link.path}>{link.label}</Link>;
+        return (
+          <Link
+            href={link.path}
+            target={link.label === "Portfolio" ? "_blank" : undefined}
+          >
+            {link.label}
+          </Link>
+        );
       })}
     </div>
   );

@@ -46,3 +46,9 @@
 .hero_overlay {
   @apply absolute z-10 h-[50vh] w-screen bg-black opacity-60
 }
+
+/* Form */
+
+.input {
+  @apply border-black border p-2 w-[600px] rounded-md bg-[#FAFAFA] placeholder-slate-600
+}
