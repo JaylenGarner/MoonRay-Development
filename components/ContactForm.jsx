@@ -2,14 +2,34 @@
 
 import { workSans } from "@/lib/fonts";
 import { useState } from "react";
+import handleEmail from "@/lib/handleEmail";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [complete, setComplete] = useState(false);
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const formData = {
+      name,
+      email,
+      subject,
+      message,
+    };
+
+    const response = await handleEmail(formData);
+
+    if (response) {
+      setIsLoading(false);
+      setComplete(true);
+    }
+  };
 
   return (
     <div className="pt-16">
