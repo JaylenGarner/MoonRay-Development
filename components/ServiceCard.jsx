@@ -1,5 +1,8 @@
+"use client";
+
 import { workSans } from "@/lib/fonts";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const ServiceCard = ({ service, i }) => {
   const isEven = i % 2 === 0;
@@ -18,7 +21,13 @@ const ServiceCard = ({ service, i }) => {
   return (
     <div className="flex items-center z-0 relative">
       <Link href={service.page}>
-        <img
+        <motion.img
+          initial={{ opacity: 1, scale: 1 }}
+          whileHover={{
+            opacity: 0.75,
+            scale: 1.02,
+          }}
+          transition={{ duration: 1 }}
           src={service.previewImg}
           className={`w-[900px] h-[600px] ${imgMargin}`}
         />
@@ -41,9 +50,18 @@ const ServiceCard = ({ service, i }) => {
           </div>
           <div className={`absolute bottom-8 ${buttonPosition} flex `}>
             <Link href={service.page}>
-              <button className="border-2 border-white pt-2 pb-2 pr-6 pl-6 font-bold text-lg">
+              <motion.button
+                initial={{ scale: 1, backgroundColor: "transparent" }}
+                whileHover={{
+                  scale: 1.08,
+                  backgroundColor: "white",
+                  color: "black",
+                }}
+                transition={{ duration: 0.8 }}
+                className="border-2 border-white pt-2 pb-2 pr-6 pl-6 font-bold text-lg"
+              >
                 Learn More
-              </button>
+              </motion.button>
             </Link>
           </div>
         </div>
