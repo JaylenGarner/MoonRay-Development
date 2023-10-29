@@ -54,5 +54,5 @@
 /* Form */
 
 .input {
-  @apply border-black border p-2 w-[600px] rounded-md bg-[#FAFAFA] placeholder-slate-600
+  @apply border-black border p-2 w-[600px] rounded-md bg-gray-50 placeholder-slate-600
 }
