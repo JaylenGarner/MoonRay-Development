@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
-import LoadIn from "@/components/animations/LoadIn";
 
 const Contact = () => {
   const info = {
@@ -10,10 +9,10 @@ const Contact = () => {
   };
 
   return (
-    <LoadIn>
+    <>
       <Hero service={info} />
       <ContactForm />
-    </LoadIn>
+    </>
   );
 };
 
