@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import ServicesDropDown from "./ServicesDropDown";
 import { workSans } from "@/lib/fonts";
 import { motion } from "framer-motion";
 
@@ -40,9 +39,7 @@ const Nav = () => {
         </motion.div>
       </Link>
       {links.map((link) => {
-        return link.label === "Services" ? (
-          <div className="">Services</div>
-        ) : (
+        return (
           <Link
             href={link.path}
             target={link.label === "Portfolio" ? "_blank" : undefined}

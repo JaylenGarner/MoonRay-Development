@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import LoadIn from "@/components/animations/LoadIn";
 
 const Contact = () => {
-  const service = {
+  const info = {
     name: "Contact Us",
     heroImg:
       "https://moonray-development.s3.amazonaws.com/Public/Assets/satellite.jpg",
@@ -11,7 +11,7 @@ const Contact = () => {
 
   return (
     <LoadIn>
-      <Hero service={service} />
+      <Hero service={info} />
       <ContactForm />
     </LoadIn>
   );
