@@ -1,9 +1,6 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { workSans } from "@/lib/fonts";
-import { motion } from "framer-motion";
 
 const links = [
   {
@@ -30,13 +27,13 @@ const Nav = () => {
       className={`${workSans.className} h-[70px] absolute w-full flex_center space-x-8 text-xl font-bold pt-8 z-30 text-white`}
     >
       <Link href="/">
-        <motion.div initial={{ opacity: 1 }} whileHover={{ opacity: 0.5 }}>
+        <div className="transition duration-1000 hover:opacity-75">
           <Image
             src="https://moonray-development.s3.amazonaws.com/Public/Assets/moonray-logo.svg"
             width={80}
             height={80}
           ></Image>
-        </motion.div>
+        </div>
       </Link>
       {links.map((link) => {
         return (
@@ -44,9 +41,9 @@ const Nav = () => {
             href={link.path}
             target={link.label === "Portfolio" ? "_blank" : undefined}
           >
-            <motion.div initial={{ opacity: 1 }} whileHover={{ opacity: 0.5 }}>
+            <div className="transition duration-100 hover:opacity-75">
               {link.label}
-            </motion.div>
+            </div>
           </Link>
         );
       })}
