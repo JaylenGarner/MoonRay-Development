@@ -11,7 +11,7 @@ const VideoHero = () => {
           </h1>
 
           <Link href="/services">
-            <button className="bg-white p-4 rounded-md text-xl font-bold transition duration-700 hover:opacity-75">
+            <button className="bg-slate-200 p-4 text-2xl font-bold transition duration-700 hover:opacity-75">
               View Services
             </button>
           </Link>
