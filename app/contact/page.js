@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
+import Calendly from "@/components/Calendly";
 
 const Contact = () => {
   const info = {
@@ -11,7 +12,11 @@ const Contact = () => {
   return (
     <>
       <Hero service={info} />
-      <ContactForm />
+
+      <div className="flex justify-center items-center space-x-16">
+        <ContactForm />
+        <Calendly />
+      </div>
     </>
   );
 };
