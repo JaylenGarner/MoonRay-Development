@@ -7,7 +7,12 @@ const Calendly = () => {
     <InlineWidget
       url="https://calendly.com/jaylen-garner"
       styles={{ height: "600px" }}
-      pageSettings={{ primaryColor: "212121", textColor: "212121" }}
+      pageSettings={{
+        primaryColor: "212121",
+        textColor: "212121",
+        hideEventTypeDetails: true,
+        hideLandingPageDetails: true,
+      }}
     />
   );
 };
