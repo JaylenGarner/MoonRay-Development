@@ -1,4 +1,5 @@
 import { workSans } from "@/lib/fonts";
+import Link from "next/link";
 
 const ServiceContent = ({ service }) => {
   return (
@@ -15,7 +16,21 @@ const ServiceContent = ({ service }) => {
             {service.heading}
           </h2>
         </div>
-        <p className={`pt-8 text-lg  ${workSans.className}`}>{service.body}</p>
+
+        <div
+          className={`pt-8 text-lg flex flex-col space-y-8 ${workSans.className}`}
+        >
+          <p>{service.body}</p>
+          <span>
+            <Link
+              href={"/contact"}
+              className="underline font-semibold hover:opacity-60 transition duration-300"
+            >
+              Contact Us
+            </Link>{" "}
+            to learn more.
+          </span>
+        </div>
       </div>
     </div>
   );
